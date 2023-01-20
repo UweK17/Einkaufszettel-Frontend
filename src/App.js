@@ -1,7 +1,6 @@
 import './styles/App.css';
 import React, { useState, useEffect } from 'react';
 import connection from './connection.json';
-import Dropdown from './component/Dropdown.js';
 
 
 function App() {
@@ -46,7 +45,6 @@ const [items, setItems] = useState([]);
   // }
  
   const itemDelete = (id) => {
-    // id.preventDefault();
     fetch(`${connection.URI}/${id}`, {
       method: "DELETE",
       headers: {
@@ -60,24 +58,23 @@ const [items, setItems] = useState([]);
   return (
     <div className="App">
       <h1>Einkaufsliste</h1>
-      {/* <button onClick={showList}>Zeige Liste</button> */}
       <form onSubmit={handleSubmit} className="commentForm">
         <input 
           type="text"
           name="name"
-          placeholder="item"
+          placeholder="Einkauf"
+          maxlength="10"
           value={formData.name}
           onChange={handleChange}
         />
-        <Dropdown trigger={<button>Dropdown</button>}/>
-        <button>save item</button>
+        <button className="saveBtn">Speichern</button>
       </form>
 
       <div>
         <ul>
           {items.map(item => (
             <li key={item._id}>{item.name}
-             <button onClick={() => itemDelete(item._id)}>Löschen</button>
+             <button className='deleteBtn' onClick={() => itemDelete(item._id)}>Löschen</button>
             </li>
           ))}
         </ul>

@@ -1,12 +1,13 @@
 * {
   box-sizing: border-box;
-  margin: 0;
+  margin: 1%;
   padding: 0;
 }
 
 h1 {
   text-align: center;
   margin: 1%;
+  letter-spacing: calc(.4rem + 1vw);
 }
 
 form {
@@ -14,6 +15,30 @@ form {
   justify-content: space-between;
 }
 
+input {
+  width: 60%;
+  font-size: calc(2rem + 1vw);
+  border-radius: 5px;
+}
+
+.saveBtn {
+  width: 37%;
+  font-size: calc(1.5rem + 1vw);
+  border-radius: 5px;
+  background-color: aquamarine;
+}
+
 li {
+  display: flex;
+  justify-content: space-between;
   list-style-type: none;
+  font-size: calc(1.5rem + 1vw);
+  margin: 0;
+}
+
+.deleteBtn {
+  width: 37%;
+  font-size: calc(1.5rem + 1vw);
+  border-radius: 5px;
+  background-color: rgb(220, 31, 11);
 }
