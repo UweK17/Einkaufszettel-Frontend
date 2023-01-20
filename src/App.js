@@ -63,18 +63,19 @@ const [items, setItems] = useState([]);
           type="text"
           name="name"
           placeholder="Einkauf"
-          maxlength="10"
+          maxlength="13"
           value={formData.name}
           onChange={handleChange}
         />
         <button className="saveBtn">Speichern</button>
       </form>
-
+      <hr></hr>
       <div>
         <ul>
           {items.map(item => (
-            <li key={item._id}>{item.name}
-             <button className='deleteBtn' onClick={() => itemDelete(item._id)}>Löschen</button>
+            <li>
+              <div key={item._id}>{item.name}</div>
+              <button className='deleteBtn' onClick={() => itemDelete(item._id)}>Löschen</button>
             </li>
           ))}
         </ul>
