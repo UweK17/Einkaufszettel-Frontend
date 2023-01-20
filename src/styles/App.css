@@ -9,6 +9,11 @@ h1 {
   margin: 1%;
 }
 
+form {
+  display: flex;
+  justify-content: space-between;
+}
+
 li {
   list-style-type: none;
 }

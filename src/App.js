@@ -1,6 +1,7 @@
-import './App.css';
+import './styles/App.css';
 import React, { useState, useEffect } from 'react';
 import connection from './connection.json';
+import Dropdown from './component/Dropdown.js';
 
 
 function App() {
@@ -39,10 +40,10 @@ const [items, setItems] = useState([]);
   useEffect(() => {
     fetchData();
   });
-  
-  const showList = () => {
-    fetchData();
-  }
+
+  // const showList = () => {
+  //   fetchData();
+  // }
  
   const itemDelete = (id) => {
     // id.preventDefault();
@@ -59,7 +60,7 @@ const [items, setItems] = useState([]);
   return (
     <div className="App">
       <h1>Einkaufsliste</h1>
-      <button onClick={showList}>Zeige Liste</button>
+      {/* <button onClick={showList}>Zeige Liste</button> */}
       <form onSubmit={handleSubmit} className="commentForm">
         <input 
           type="text"
@@ -68,6 +69,7 @@ const [items, setItems] = useState([]);
           value={formData.name}
           onChange={handleChange}
         />
+        <Dropdown trigger={<button>Dropdown</button>}/>
         <button>save item</button>
       </form>
 
