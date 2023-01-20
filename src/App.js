@@ -36,6 +36,10 @@ const [items, setItems] = useState([]);
     setFormData(INITIAL);
   };
 
+  useEffect(() => {
+    fetchData();
+  });
+  
   const showList = () => {
     fetchData();
   }
@@ -54,6 +58,7 @@ const [items, setItems] = useState([]);
 
   return (
     <div className="App">
+      <h1>Einkaufsliste</h1>
       <button onClick={showList}>Zeige Liste</button>
       <form onSubmit={handleSubmit} className="commentForm">
         <input 
