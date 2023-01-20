@@ -40,9 +40,9 @@ const [items, setItems] = useState([]);
     fetchData();
   }
  
-  const itemDelete = (e) => {
-    e.preventDefault();
-    fetch(`${connection.URI}`, {
+  const itemDelete = (id) => {
+    // id.preventDefault();
+    fetch(`${connection.URI}/${id}`, {
       method: "DELETE",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -70,7 +70,7 @@ const [items, setItems] = useState([]);
         <ul>
           {items.map(item => (
             <li key={item._id}>{item.name}
-             <button onClick={itemDelete}>Löschen</button>
+             <button onClick={() => itemDelete(item._id)}>Löschen</button>
             </li>
           ))}
         </ul>
