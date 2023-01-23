@@ -19,7 +19,7 @@ form {
 
 input {
   width: 60%;
-  font-size: calc(2rem + 1vw);
+  font-size: calc(1.5rem + 1vw);
   border-radius: 5px;
 }
 
@@ -40,13 +40,13 @@ li {
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1rem + 1vw);
   margin: 1%;
 }
 
 .deleteBtn {
   width: 37%;
-  font-size: calc(1.5rem + 1vw);
+  font-size: calc(1.3rem + 1vw);
   border-radius: 5px;
   background-color: rgb(220, 31, 11);
 }
