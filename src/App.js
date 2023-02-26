@@ -63,7 +63,7 @@ const [items, setItems] = useState([]);
           type="text"
           name="name"
           placeholder="Einkauf"
-          maxlength="18"
+          maxlength="20"
           value={formData.name}
           onChange={handleChange}
         />
